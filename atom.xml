@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[pakchoi]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://pakchoi.github.io/"/>
+  <updated>2015-05-07T14:18:45.000Z</updated>
+  <id>http://pakchoi.github.io/</id>
+  
+  <author>
+    <name><![CDATA[pakchoi]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[homebrew滚动更新的问题]]></title>
+    <link href="http://pakchoi.github.io/2015/05/08/homebrew%E6%BB%9A%E5%8A%A8%E6%9B%B4%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/</id>
+    <published>2015-05-07T21:18:39.000Z</published>
+    <updated>2015-05-07T14:18:45.000Z</updated>
+    <content type="html"><![CDATA[<a id="more"></a>
+<p>最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。</p>
+<p>具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个叫做ilmbase的软件的动态库文件。。。</p>
+<p>那既然知道了问题所在，解决方法就有了，很简单就是指定版本重装ilmbase。</p>
+<p>homebrew的ruby包:</p>
+<ul>
+<li><p><a href="https://raw.githubusercontent.com/Homebrew/homebrew/2482d6e77ffcf2da68d11846dd8686a842286ac3/Library/Formula/ilmbase.rb" target="_blank" rel="external">ilmbase.rb</a></p>
+</li>
+<li><p><a href="https://raw.githubusercontent.com/Homebrew/homebrew/22076e28a72e7d4c028131bf7acb522f6505738f/Library/Formula/openexr.rb" target="_blank" rel="external">openexr.rb</a></p>
+</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<a id="more"></a>
+<p>最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。</p>
+<p>具体点今天的问]]>
+    </summary>
+    
+      <category term="dylib" scheme="http://pakchoi.github.io/tags/dylib/"/>
+    
+      <category term="library" scheme="http://pakchoi.github.io/tags/library/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[新博客与新目标]]></title>
+    <link href="http://pakchoi.github.io/2015/03/11/%E6%96%B0%E5%8D%9A%E5%AE%A2%E4%B8%8E%E6%96%B0%E7%9B%AE%E6%A0%87/"/>
+    <id>http://pakchoi.github.io/2015/03/11/新博客与新目标/</id>
+    <published>2015-03-10T16:11:44.000Z</published>
+    <updated>2015-03-10T08:21:07.000Z</updated>
+    <content type="html"><![CDATA[<p>今天开始使用hexo写博客。在此我将记录成长。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天开始使用hexo写博客。在此我将记录成长。</p>
+]]>
+    </summary>
+    
+  </entry>
+  
+</feed>
