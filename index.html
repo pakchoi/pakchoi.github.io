@@ -104,18 +104,17 @@ ga('send', 'pageview');
 <p>最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。</p>
 <p>具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个叫做ilmbase的软件的动态库文件。。。</p>
 <p>那既然知道了问题所在，解决方法就有了，很简单就是指定版本重装ilmbase。</p>
+<p>这里再给个brew的小技巧:<br>brew pin ilmbase<br>brew pin openexr<br>上面两个命令的意思就是说固定软件版本，很简单易用吧~~</p>
 <p>homebrew的ruby包:</p>
 <ul>
-<li><p><a href="https://raw.githubusercontent.com/Homebrew/homebrew/2482d6e77ffcf2da68d11846dd8686a842286ac3/Library/Formula/ilmbase.rb" target="_blank" rel="external">ilmbase.rb</a></p>
-</li>
-<li><p><a href="https://raw.githubusercontent.com/Homebrew/homebrew/22076e28a72e7d4c028131bf7acb522f6505738f/Library/Formula/openexr.rb" target="_blank" rel="external">openexr.rb</a></p>
-</li>
+<li><a href="https://raw.githubusercontent.com/Homebrew/homebrew/2482d6e77ffcf2da68d11846dd8686a842286ac3/Library/Formula/ilmbase.rb" target="_blank" rel="external">ilmbase.rb</a></li>
+<li><a href="https://raw.githubusercontent.com/Homebrew/homebrew/22076e28a72e7d4c028131bf7acb522f6505738f/Library/Formula/openexr.rb" target="_blank" rel="external">openexr.rb</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/" data-id="ci9fmfm2j0002rk5u1y2aotu9" class="article-share-link">Share</a>
+      <a data-url="http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/" data-id="ci9jxfnro0002xqfydmf8q1dq" class="article-share-link">Share</a>
       
         <a href="http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -156,7 +155,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pakchoi.github.io/2015/03/11/新博客与新目标/" data-id="ci9fmfm2e0001rk5u7poluc7p" class="article-share-link">Share</a>
+      <a data-url="http://pakchoi.github.io/2015/03/11/新博客与新目标/" data-id="ci9jxfnrk0001xqfy9vl866n8" class="article-share-link">Share</a>
       
         <a href="http://pakchoi.github.io/2015/03/11/新博客与新目标/#disqus_thread" class="article-comment-link">Comments</a>
       
