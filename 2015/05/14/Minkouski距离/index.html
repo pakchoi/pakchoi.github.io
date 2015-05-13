@@ -118,24 +118,27 @@ ga('send', 'pageview');
 <p>Minkouski ditance还可以分为：</p>
 <blockquote>
 <ul>
-<li>p = 1 , Manhattan (or city block) distance 曼哈顿距离<blockquote>
+<li><p>p = 1 , Manhattan (or city block) distance 曼哈顿距离</p>
+<blockquote>
 <ul>
 <li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>\[<br>d(i,\quad j)\quad =\quad { { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) } }<br>\]</li>
-<li>切比雪夫距离（两点各座标数值差绝对值的最大值）</li>
 </ul>
 </blockquote>
 </li>
-</ul>
-<ul>
-<li>p = 2 , Euclidean distance  欧几里得距离<br>  \[<br>d(i,\quad j)\quad =\quad \sqrt{ { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }^{ 2 }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }^{ 2 }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) }^{ 2 } }<br>\]</li>
+<li><p>p = 2 , Euclidean distance  欧几里得距离<br>  \[<br>d(i,\quad j)\quad =\quad \sqrt{ { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }^{ 2 }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }^{ 2 }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) }^{ 2 } }<br>\]</p>
+</li>
+<li>p-&gt;oo , supremum 切比雪夫距离（两点各座标数值差绝对值的最大值）</li>
 </ul>
 </blockquote>
-<p>  距离的定义可以直接影响一些问题：<br>  比如A<em>和IDA</em>启发函数的设计。。</p>
+<ul>
+<li>距离的定义可以直接影响一些问题：<br>比如A<em>和IDA</em>启发函数的设计。。</li>
+<li>比如描述两组数据的相似度，或者说是两组状态的相似度。。</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://pakchoi.github.io/2015/05/14/Minkouski距离/" data-id="ci9mu37em00079i5u2dstc2at" class="article-share-link">Share</a>
+      <a data-url="http://pakchoi.github.io/2015/05/14/Minkouski距离/" data-id="ci9mu7epg0007r1fywrf9xk3y" class="article-share-link">Share</a>
       
         <a href="http://pakchoi.github.io/2015/05/14/Minkouski距离/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -261,6 +264,7 @@ ga('send', 'pageview');
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
