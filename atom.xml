@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://pakchoi.github.io/"/>
-  <updated>2015-05-13T14:32:47.000Z</updated>
+  <updated>2015-05-14T05:06:45.000Z</updated>
   <id>http://pakchoi.github.io/</id>
   
   <author>
@@ -19,10 +19,10 @@
     <link href="http://pakchoi.github.io/2015/05/14/Minkouski%E8%B7%9D%E7%A6%BB/"/>
     <id>http://pakchoi.github.io/2015/05/14/Minkouski距离/</id>
     <published>2015-05-13T21:47:11.000Z</published>
-    <updated>2015-05-13T14:32:47.000Z</updated>
+    <updated>2015-05-14T05:06:45.000Z</updated>
     <content type="html"><![CDATA[<p>Simple inline $a = b + c$.</p>
 <p>最近看书的时候注意到了一个问题：Minkouski距离</p>
-<p>$$<br>d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }^{ p }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }^{ p }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) }^{ p } }<br>$$</p>
+<p>$<br>d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }^{ p }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }^{ p }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) }^{ p } }<br>$</p>
 <p>其有三个属性：</p>
 <blockquote>
 <ul>
@@ -37,11 +37,11 @@
 <li><p>p = 1 , Manhattan (or city block) distance 曼哈顿距离</p>
 <blockquote>
 <ul>
-<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>\[<br>d(i,\quad j)\quad =\quad { { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) } }<br>\]</li>
+<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$<br>d(i,\quad j)\quad =\quad { { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) } }<br>$</li>
 </ul>
 </blockquote>
 </li>
-<li><p>p = 2 , Euclidean distance  欧几里得距离<br>  \[<br>d(i,\quad j)\quad =\quad \sqrt{ { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }^{ 2 }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }^{ 2 }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) }^{ 2 } }<br>\]</p>
+<li><p>p = 2 , Euclidean distance  欧几里得距离<br>  $<br>d(i,\quad j)\quad =\quad \sqrt{ { ({ x }<em>{ i1 }-{ x }</em>{ j1 }) }^{ 2 }+{ ({ x }<em>{ i2 }-{ x }</em>{ j2 }) }^{ 2 }+…+{ ({ x }<em>{ il }-{ x }</em>{ jl }) }^{ 2 } }<br>  $</p>
 </li>
 <li>p-&gt;oo , supremum 切比雪夫距离（两点各座标数值差绝对值的最大值）</li>
 </ul>
@@ -54,7 +54,7 @@
     <summary type="html">
     <![CDATA[<p>Simple inline $a = b + c$.</p>
 <p>最近看书的时候注意到了一个问题：Minkouski距离</p>
-<p>$$<br>d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }<em>{ i1 }-{ x }]]>
+<p>$<br>d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }<em>{ i1 }-{ x }<]]>
     </summary>
     
       <category term="Math" scheme="http://pakchoi.github.io/tags/Math/"/>
