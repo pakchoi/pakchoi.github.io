@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://pakchoi.github.io/"/>
-  <updated>2015-05-16T10:38:17.000Z</updated>
+  <updated>2015-05-16T10:53:13.000Z</updated>
   <id>http://pakchoi.github.io/</id>
   
   <author>
@@ -19,34 +19,25 @@
     <link href="http://pakchoi.github.io/2015/05/14/Minkouski%E8%B7%9D%E7%A6%BB/"/>
     <id>http://pakchoi.github.io/2015/05/14/Minkouski距离/</id>
     <published>2015-05-13T21:47:11.000Z</published>
-    <updated>2015-05-16T10:38:17.000Z</updated>
+    <updated>2015-05-16T10:53:13.000Z</updated>
     <content type="html"><![CDATA[<p>最近看书的时候注意到了一个问题：Minkouski距离</p>
 <p>$ d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ p }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ p } } $</p>
-<p>其有三个属性：</p>
-<blockquote>
-<ul>
+<h4 id="其有三个属性：">其有三个属性：</h4><ul>
 <li>Positivity :</li>
 <li>Symmetry 对称性 :</li>
 <li>Triangle Inequality :</li>
 </ul>
-</blockquote>
-<p>Minkouski ditance还可以分为：</p>
-<blockquote>
-<ul>
-<li><p>p = 1 , Manhattan (or city block) distance 曼哈顿距离</p>
-<blockquote>
-<ul>
-<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$ d(i,\quad j)\quad =\quad { { ({ x }_{ i1 }-{ x }_{ j1 }) }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }+…+{ ({ x }_{ il }-{ x }_{ jl }) } } $</li>
+<h4 id="Minkouski_ditance还可以分为：">Minkouski ditance还可以分为：</h4><ul>
+<li>p = 1 , Manhattan (or city block) distance 曼哈顿距离</li>
+<li><ul>
+<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$ d(i,\quad j)\quad =\quad { \left| { x }_ { i1 }-{ x }_ { j1 } \right| +\left| { x }_ { i2 }-{ x }_ { j2 } \right| +…+\left| { x }_ i3-{ x }_ { j3 } \right|  } $</li>
 </ul>
-</blockquote>
 </li>
-<li><p>p = 2 , Euclidean distance  欧几里得距离<br>  $ d(i,\quad j)\quad =\quad \sqrt{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ 2 }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ 2 }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ 2 } } $</p>
+<li><p>p = 2 , Euclidean distance  欧几里得距离<br>$ d(i,\quad j)\quad =\quad \sqrt{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ 2 }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ 2 }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ 2 } } $</p>
 </li>
 <li>p-&gt;oo , supremum 切比雪夫距离（两点各座标数值差绝对值的最大值）</li>
 </ul>
-</blockquote>
-<p>距离的定义可以直接影响一些问题：</p>
-<ul>
+<h4 id="距离的定义可以直接影响一些问题：">距离的定义可以直接影响一些问题：</h4><ul>
 <li>比如A*和IDA*启发函数的设计。。</li>
 <li>比如描述两组数据的相似度，或者说是两组状态的相似度。。</li>
 <li>比如k-means算法中距离的衡量的标准。。</li>
