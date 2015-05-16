@@ -120,12 +120,12 @@ ga('send', 'pageview');
 <h4 id="Minkouski_ditance还可以分为：">Minkouski ditance还可以分为：</h4><ul>
 <li>p = 1 , Manhattan (or city block) distance 曼哈顿距离</li>
 <li><ul>
-<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$ d(i,j)={ max(\left| { x }_ { i1 }-{ x }_ { j1 } \right| ,\left| { x }_ { i2 }-{ x }_ { j2 } \right| ,…,\left| { x }_ { i3 }-{ x }_ { j3 } \right|  }) $</li>
+<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$ d(i, j) = { \left| { x }_ { i1 }-{ x }_ { j1 } \right| +\left| { x }_ { i2 }-{ x }_ { j2 } \right| +…+\left| { x }_ { i3 }-{ x }_ { j3 } \right|  } $</li>
 </ul>
 </li>
 <li><p>p = 2 , Euclidean distance 欧几里得距离<br>$ d(i, j) = \sqrt{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ 2 }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ 2 }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ 2 } } $</p>
 </li>
-<li>p-&gt;oo , supremum distance 切比雪夫距离（两点各座标数值差绝对值的最大值）</li>
+<li>p-&gt;oo , supremum distance 切比雪夫距离（两点各座标数值差绝对值的最大值）<br>$d(i,j)={ max(\left| { x }_ { i1 }-{ x }_ { j1 } \right| ,\left| { x }_ { i2 }-{ x }_ { j2 } \right| ,…,\left| { x }_ { i3 }-{ x }_ { j3 } \right|  })$</li>
 </ul>
 <h4 id="距离的定义可以直接影响一些问题：">距离的定义可以直接影响一些问题：</h4><ul>
 <li>比如A*和IDA*启发函数的设计。。</li>
