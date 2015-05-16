@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://pakchoi.github.io/"/>
-  <updated>2015-05-16T10:53:13.000Z</updated>
+  <updated>2015-05-16T11:15:45.000Z</updated>
   <id>http://pakchoi.github.io/</id>
   
   <author>
@@ -19,18 +19,17 @@
     <link href="http://pakchoi.github.io/2015/05/14/Minkouski%E8%B7%9D%E7%A6%BB/"/>
     <id>http://pakchoi.github.io/2015/05/14/Minkouski距离/</id>
     <published>2015-05-13T21:47:11.000Z</published>
-    <updated>2015-05-16T10:53:13.000Z</updated>
-    <content type="html"><![CDATA[<p>最近看书的时候注意到了一个问题：Minkouski距离</p>
-<p>$ d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ p }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ p } } $</p>
+    <updated>2015-05-16T11:15:45.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="最近看书的时候注意到了一个问题：Minkouski距离">最近看书的时候注意到了一个问题：Minkouski距离</h3><p>$ d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ p }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ p } } $</p>
 <h4 id="其有三个属性：">其有三个属性：</h4><ul>
-<li>Positivity :</li>
-<li>Symmetry 对称性 :</li>
-<li>Triangle Inequality :</li>
+<li>Positivity : 必然为正数</li>
+<li>Symmetry 对称性 : $p_1$与$p_2$相互距离相等</li>
+<li>Triangle Inequality : 对于任意$p_i$、$p_j$、$p_k$，$d(i,j)\le d(i,k)+d(k,j)$</li>
 </ul>
 <h4 id="Minkouski_ditance还可以分为：">Minkouski ditance还可以分为：</h4><ul>
 <li>p = 1 , Manhattan (or city block) distance 曼哈顿距离</li>
 <li><ul>
-<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$ d(i,\quad j)\quad =\quad { \left| { x }_ { i1 }-{ x }_ { j1 } \right| +\left| { x }_ { i2 }-{ x }_ { j2 } \right| +…+\left| { x }_ i3-{ x }_ { j3 } \right|  } $</li>
+<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$ d(i,\quad j)\quad =\quad { \left| { x }_ { i1 }-{ x }_ { j1 } \right| +\left| { x }_ { i2 }-{ x }_ { j2 } \right| +…+\left| { x }_ { i3 }-{ x }_ { j3 } \right|  } $</li>
 </ul>
 </li>
 <li><p>p = 2 , Euclidean distance  欧几里得距离<br>$ d(i,\quad j)\quad =\quad \sqrt{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ 2 }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ 2 }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ 2 } } $</p>
@@ -46,8 +45,7 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>最近看书的时候注意到了一个问题：Minkouski距离</p>
-<p>$ d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ x }_{ i2 }-{ x }_{ ]]>
+    <![CDATA[<h3 id="最近看书的时候注意到了一个问题：Minkouski距离">最近看书的时候注意到了一个问题：Minkouski距离</h3><p>$ d(i,\quad j)\quad =\quad \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }]]>
     </summary>
     
       <category term="Math" scheme="http://pakchoi.github.io/tags/Math/"/>
