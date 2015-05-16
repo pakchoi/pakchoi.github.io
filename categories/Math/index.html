@@ -4,20 +4,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>homebrew滚动更新的问题 | pakchoi</title>
+  <title>Category: Math | pakchoi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。
-具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个">
-<meta property="og:type" content="article">
-<meta property="og:title" content="homebrew滚动更新的问题">
-<meta property="og:url" content="http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="pakchoi">
+<meta property="og:url" content="http://pakchoi.github.io/categories/Math/index.html">
 <meta property="og:site_name" content="pakchoi">
-<meta property="og:description" content="最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。
-具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="homebrew滚动更新的问题">
-<meta name="twitter:description" content="最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。
-具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个">
+<meta name="twitter:title" content="pakchoi">
+<meta name="twitter:description">
 <meta name="twitter:creator" content="@pakchoi">
 <link rel="publisher" href="pakchoi">
   
@@ -86,85 +83,39 @@ ga('send', 'pageview');
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="post-homebrew滚动更新的问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/08/homebrew滚动更新的问题/" class="article-date">
-  <time datetime="2015-05-07T21:18:39.000Z" itemprop="datePublished">2015-05-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      homebrew滚动更新的问题
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2015/05/14/Minkouski距离/" class="archive-article-date">
+  <time datetime="2015-05-13T21:47:11.000Z" itemprop="datePublished">May 13</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/05/14/Minkouski距离/">Minkouski距离</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-<p>最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。</p>
-<p>具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个叫做ilmbase的软件的动态库文件。。。</p>
-<p>那既然知道了问题所在，解决方法就有了，很简单就是指定版本重装ilmbase。</p>
-<p>这里再给个brew的小技巧:<br>brew pin ilmbase<br>brew pin openexr<br>上面两个命令的意思就是说固定软件版本，很简单易用吧~~</p>
-<p>homebrew的ruby包:</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/Homebrew/homebrew/2482d6e77ffcf2da68d11846dd8686a842286ac3/Library/Formula/ilmbase.rb" target="_blank" rel="external">ilmbase.rb</a></li>
-<li><a href="https://raw.githubusercontent.com/Homebrew/homebrew/22076e28a72e7d4c028131bf7acb522f6505738f/Library/Formula/openexr.rb" target="_blank" rel="external">openexr.rb</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/" data-id="ci9qy3ixz0002at5uq099uf8o" class="article-share-link">Share</a>
-      
-
-      
-        <a href="http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/#disqus_thread" class="article-comment-link">Comments</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/05/14/Minkouski距离/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Minkouski距离
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2015/03/11/新博客与新目标/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">新博客与新目标</div>
-    </a>
-  
-</nav>
-
-  
 </article>
-
-
-  <section id="comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-  </section>
+  
+  
+    </div></section>
+  
 </section>
       
       <aside id="sidebar">
@@ -261,13 +212,11 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'pakchoi';
   
-  var disqus_url = 'http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
