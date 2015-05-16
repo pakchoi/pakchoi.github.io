@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://pakchoi.github.io/"/>
-  <updated>2015-05-16T12:08:46.000Z</updated>
+  <updated>2015-05-16T12:13:13.000Z</updated>
   <id>http://pakchoi.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://pakchoi.github.io/2015/05/14/Minkouski%E8%B7%9D%E7%A6%BB/"/>
     <id>http://pakchoi.github.io/2015/05/14/Minkouski距离/</id>
     <published>2015-05-13T21:47:11.000Z</published>
-    <updated>2015-05-16T12:08:46.000Z</updated>
+    <updated>2015-05-16T12:13:13.000Z</updated>
     <content type="html"><![CDATA[<h3 id="最近看书的时候注意到了一个问题：Minkouski距离">最近看书的时候注意到了一个问题：Minkouski距离</h3><p>$ d(i, j) = \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ p }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ p } } $</p>
 <h4 id="其有三个属性：">其有三个属性：</h4><ul>
 <li>Positivity : 必然为正数</li>
@@ -51,6 +51,8 @@
       <category term="Math" scheme="http://pakchoi.github.io/tags/Math/"/>
     
       <category term="Math" scheme="http://pakchoi.github.io/categories/Math/"/>
+    
+      <category term="计算几何" scheme="http://pakchoi.github.io/categories/Math/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
     
   </entry>
   
