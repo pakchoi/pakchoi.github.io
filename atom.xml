@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://pakchoi.github.io/"/>
-  <updated>2015-05-19T04:00:43.000Z</updated>
+  <updated>2015-05-19T04:10:55.000Z</updated>
   <id>http://pakchoi.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://pakchoi.github.io/2015/05/19/n%E4%B8%AA%E7%90%83%E6%94%BE%E5%88%B0m%E4%B8%AA%E7%9B%92%E5%AD%90%E9%87%8C/"/>
     <id>http://pakchoi.github.io/2015/05/19/n个球放到m个盒子里/</id>
     <published>2015-05-19T10:04:46.000Z</published>
-    <updated>2015-05-19T04:00:43.000Z</updated>
+    <updated>2015-05-19T04:10:55.000Z</updated>
     <content type="html"><![CDATA[<h2 id="很有意思的一类组合题">很有意思的一类组合题</h2><p>n个球放到m个盒子里，根据球和盒子是否有区别以及是否允许有空盒有${ 2 } ^{ 3 }=8$种放球问题：求如下问题的放球方案数</p>
 <ul>
 <li>1) n个球有区别，m个盒子有区别，允许有空盒</li>
@@ -27,7 +27,7 @@
 <li>2) n个球有区别，m个盒子有区别，不允许有空盒</li>
 <li>$m!S(n,m)$</li>
 <li>3) n个球有区别，m个盒子无区别，允许有空盒</li>
-<li>$ \begin{cases} S(n,1)+S(n,2)+…+S(n,m),\quad m\le n \ S(n,1)+S(n,2)+…+S(n,n),\quad m&gt;n \end{cases} $</li>
+<li>$ \begin{cases} S(n,1)+S(n,2)+…+S(n,m),\quad m\le n ; \ S(n,1)+S(n,2)+…+S(n,n),\quad m&gt;n \end{cases} $</li>
 <li>4) n个球有区别，m个盒子无区别，不允许有空盒</li>
 <li>$S(n,m)$</li>
 <li>5) n个球无区别，m个盒子有区别，允许有空盒</li>
