@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[pakchoi]]></title>
-  
+  <subtitle><![CDATA[这是你想要的人生吗？]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://pakchoi.github.io/"/>
   <updated>2015-05-19T04:10:55.000Z</updated>
