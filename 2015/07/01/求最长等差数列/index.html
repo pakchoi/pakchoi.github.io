@@ -4,17 +4,26 @@
 <head>
   <meta charset="utf-8">
   
-  <title>pakchoi</title>
+  <title>求最长等差数列 | pakchoi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="pakchoi">
-<meta property="og:url" content="http://pakchoi.github.io/index.html">
+  <meta name="description" content="最长等差数列最长连续子序列 longest consecutive sequence 问题的升级版，大家一定很熟LCS问题的求解方法，甚至他的单调队列优化版本（栈优化）。
+这里我们将讨论其升级版：给出一系列的随机的整数数列。要求在$O(n^2)$的时间复杂度内求解出一个最长的子序列并且为等差数列。
+这里需要注意的是题目描述里并没有说明是输出等差数列的长度还是等差数列本身。
+这其实也是一个被别人研究">
+<meta property="og:type" content="article">
+<meta property="og:title" content="求最长等差数列">
+<meta property="og:url" content="http://pakchoi.github.io/2015/07/01/求最长等差数列/index.html">
 <meta property="og:site_name" content="pakchoi">
-<meta property="og:description">
+<meta property="og:description" content="最长等差数列最长连续子序列 longest consecutive sequence 问题的升级版，大家一定很熟LCS问题的求解方法，甚至他的单调队列优化版本（栈优化）。
+这里我们将讨论其升级版：给出一系列的随机的整数数列。要求在$O(n^2)$的时间复杂度内求解出一个最长的子序列并且为等差数列。
+这里需要注意的是题目描述里并没有说明是输出等差数列的长度还是等差数列本身。
+这其实也是一个被别人研究">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pakchoi">
-<meta name="twitter:description">
+<meta name="twitter:title" content="求最长等差数列">
+<meta name="twitter:description" content="最长等差数列最长连续子序列 longest consecutive sequence 问题的升级版，大家一定很熟LCS问题的求解方法，甚至他的单调队列优化版本（栈优化）。
+这里我们将讨论其升级版：给出一系列的随机的整数数列。要求在$O(n^2)$的时间复杂度内求解出一个最长的子序列并且为等差数列。
+这里需要注意的是题目描述里并没有说明是输出等差数列的长度还是等差数列本身。
+这其实也是一个被别人研究">
 <meta name="twitter:creator" content="@pakchoi">
 <link rel="publisher" href="pakchoi">
   
@@ -87,9 +96,7 @@ ga('send', 'pageview');
   </div>
 </header>
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-求最长等差数列" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-求最长等差数列" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/07/01/求最长等差数列/" class="article-date">
   <time datetime="2015-07-01T10:27:07.000Z" itemprop="datePublished">2015-07-01</time>
@@ -106,8 +113,8 @@ ga('send', 'pageview');
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/01/求最长等差数列/">求最长等差数列</a>
+    <h1 class="article-title" itemprop="name">
+      求最长等差数列
     </h1>
   
 
@@ -147,250 +154,26 @@ ga('send', 'pageview');
     </footer>
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/05/19/n个球放到m个盒子里/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">n个球放到m个盒子里</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-  
-    <article id="post-n个球放到m个盒子里" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/19/n个球放到m个盒子里/" class="article-date">
-  <time datetime="2015-05-19T10:04:46.000Z" itemprop="datePublished">2015-05-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Math/">Math</a>►<a class="article-category-link" href="/categories/Math/Combinatorics/">Combinatorics</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/19/n个球放到m个盒子里/">n个球放到m个盒子里</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="很有意思的一类组合题">很有意思的一类组合题</h2><p>n个球放到m个盒子里，根据球和盒子是否有区别以及是否允许有空盒有${ 2 } ^{ 3 }=8$种放球问题：求如下问题的放球方案数</p>
-<ul>
-<li>1) n个球有区别，m个盒子有区别，允许有空盒</li>
-<li>${ m }^{ n }$</li>
-<li>2) n个球有区别，m个盒子有区别，不允许有空盒</li>
-<li>$m!S(n,m)$</li>
-<li>3) n个球有区别，m个盒子无区别，允许有空盒</li>
-<li>$ \begin{cases} S(n,1)+S(n,2)+…+S(n,m),\quad m\le n ; \ S(n,1)+S(n,2)+…+S(n,n),\quad m&gt;n \end{cases} $</li>
-<li>4) n个球有区别，m个盒子无区别，不允许有空盒</li>
-<li>$S(n,m)$</li>
-<li>5) n个球无区别，m个盒子有区别，允许有空盒</li>
-<li>$C(n+m-1,n)$</li>
-<li>6) n个球无区别，m个盒子有区别，不允许有空盒</li>
-<li>$C(n-1,m-1)$</li>
-<li>7) n个球无区别，m个盒子无区别，允许有空盒</li>
-<li>$G(x)=\frac { 1 }{ (1-x)(1-{ x }^{ 2 })…(1-{ x }^{ m }) } $的$x^n$项的系数</li>
-<li>8) n个球无区别，m个盒子无区别，不允许有空盒</li>
-<li>$G(x)=\frac { x^m }{ (1-x)(1-{ x }^{ 2 })…(1-{ x }^{ m }) } $的$x^n$项的系数</li>
-</ul>
-<blockquote>
-<p>注：</p>
-<blockquote>
-<p>S(n,m)为第二类斯特林数<br>G(x)为母函数<br>C(n+m-1,n)为多重组合</p>
-</blockquote>
-</blockquote>
-
-      
+  <section id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://pakchoi.github.io/2015/05/19/n个球放到m个盒子里/" data-id="cibkoabgl0007fu5uyh9xagce" class="article-share-link">Share</a>
-      
-
-      
-        <a href="http://pakchoi.github.io/2015/05/19/n个球放到m个盒子里/#disqus_thread" class="article-comment-link">Comments</a>
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Minkouski距离" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/14/Minkouski距离/" class="article-date">
-  <time datetime="2015-05-13T21:47:11.000Z" itemprop="datePublished">2015-05-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Math/">Math</a>►<a class="article-category-link" href="/categories/Math/Geometry/">Geometry</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/14/Minkouski距离/">Minkouski距离</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="最近看书的时候注意到了一个问题：Minkouski距离">最近看书的时候注意到了一个问题：Minkouski距离</h3><p>$ d(i, j) = \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ p }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ p } } $</p>
-<h4 id="其有三个属性：">其有三个属性：</h4><ul>
-<li>Positivity : 必然为正数</li>
-<li>Symmetry 对称性 : $p_1$与$p_2$相互距离相等</li>
-<li>Triangle Inequality : 对于任意$p_i$、$p_j$、$p_k$，$d(i,j)\le d(i,k)+d(k,j)$</li>
-</ul>
-<h4 id="Minkouski_ditance还可以分为：">Minkouski ditance还可以分为：</h4><ul>
-<li>p = 1 , Manhattan (or city block) distance 曼哈顿距离</li>
-<li><ul>
-<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$ d(i, j) = { \left| { x }_ { i1 }-{ x }_ { j1 } \right| +\left| { x }_ { i2 }-{ x }_ { j2 } \right| +…+\left| { x }_ { i3 }-{ x }_ { j3 } \right|  } $</li>
-</ul>
-</li>
-<li><p>p = 2 , Euclidean distance 欧几里得距离<br>$ d(i, j) = \sqrt{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ 2 }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ 2 }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ 2 } } $</p>
-</li>
-<li>p-&gt;oo , supremum distance 切比雪夫距离（两点各座标数值差绝对值的最大值）<br>$d(i,j)={ max(\left| { x }_ { i1 }-{ x }_ { j1 } \right| ,\left| { x }_ { i2 }-{ x }_ { j2 } \right| ,…,\left| { x }_ { i3 }-{ x }_ { j3 } \right|  })$</li>
-</ul>
-<h4 id="距离的定义可以直接影响一些问题：">距离的定义可以直接影响一些问题：</h4><ul>
-<li>比如A*和IDA*启发函数的设计。。</li>
-<li>比如描述两组数据的相似度，或者说是两组状态的相似度。。</li>
-<li>比如k-means算法中距离的衡量的标准。。</li>
-<li>比如knn算法中距离。。</li>
-<li>。。。。。。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://pakchoi.github.io/2015/05/14/Minkouski距离/" data-id="cibkoabgv000hfu5uf5u4tp8o" class="article-share-link">Share</a>
-      
-
-      
-        <a href="http://pakchoi.github.io/2015/05/14/Minkouski距离/#disqus_thread" class="article-comment-link">Comments</a>
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-homebrew滚动更新的问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/08/homebrew滚动更新的问题/" class="article-date">
-  <time datetime="2015-05-07T21:18:39.000Z" itemprop="datePublished">2015-05-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C/">C++</a>►<a class="article-category-link" href="/categories/C/etc/">etc.</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/08/homebrew滚动更新的问题/">Homebrew滚动更新的问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-<p>最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。</p>
-<p>具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个叫做ilmbase的软件的动态库文件。。。</p>
-<p>那既然知道了问题所在，解决方法就有了，很简单就是指定版本重装ilmbase。</p>
-<p>这里再给个brew的小技巧:<br>brew pin ilmbase<br>brew pin openexr<br>上面两个命令的意思就是说固定软件版本，很简单易用吧~~</p>
-<p>homebrew的ruby包:</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/Homebrew/homebrew/2482d6e77ffcf2da68d11846dd8686a842286ac3/Library/Formula/ilmbase.rb" target="_blank" rel="external">ilmbase.rb</a></li>
-<li><a href="https://raw.githubusercontent.com/Homebrew/homebrew/22076e28a72e7d4c028131bf7acb522f6505738f/Library/Formula/openexr.rb" target="_blank" rel="external">openexr.rb</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/" data-id="cibkoabgp000cfu5u2qgf2yix" class="article-share-link">Share</a>
-      
-
-      
-        <a href="http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/#disqus_thread" class="article-comment-link">Comments</a>
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-新博客与新目标" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/03/11/新博客与新目标/" class="article-date">
-  <time datetime="2015-03-10T16:11:44.000Z" itemprop="datePublished">2015-03-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/11/新博客与新目标/">新博客与新目标</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天开始使用hexo写博客。在此我将记录成长。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://pakchoi.github.io/2015/03/11/新博客与新目标/" data-id="cibkoabgi0006fu5ufdsv9nqt" class="article-share-link">Share</a>
-      
-
-      
-        <a href="http://pakchoi.github.io/2015/03/11/新博客与新目标/#disqus_thread" class="article-comment-link">Comments</a>
-      
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
+  </section>
 </section>
       
       <aside id="sidebar">
@@ -477,11 +260,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'pakchoi';
   
+  var disqus_url = 'http://pakchoi.github.io/2015/07/01/求最长等差数列/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
