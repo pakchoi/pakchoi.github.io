@@ -4,17 +4,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015/7 | pakchoi</title>
+  <title>伪多项式时间 | pakchoi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="pakchoi">
-<meta property="og:url" content="http://pakchoi.github.io/archives/2015/07/index.html">
+  <meta name="description" content="直观上来看你会发现像背包DP这种问题的时间复杂度居然不是指数级。。O(nW)。。
+其实网上也已经有人做出了解答
+是的，这类问题叫做伪多项式时间复杂度问题，就其本质其实也很简单，就是大多数人在计算时间复杂度的时候都忽视了一个简单的事实，那就是没有考虑输入复杂度。
+这里还要给出两个概念：计算时间复杂度和标准时间复杂度。
+所谓计算时间复杂度就是大家经常用的计算复杂度方法求出的东西。
+而标准时间复杂度则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="伪多项式时间">
+<meta property="og:url" content="http://pakchoi.github.io/2015/09/21/伪多项式时间/index.html">
 <meta property="og:site_name" content="pakchoi">
-<meta property="og:description">
+<meta property="og:description" content="直观上来看你会发现像背包DP这种问题的时间复杂度居然不是指数级。。O(nW)。。
+其实网上也已经有人做出了解答
+是的，这类问题叫做伪多项式时间复杂度问题，就其本质其实也很简单，就是大多数人在计算时间复杂度的时候都忽视了一个简单的事实，那就是没有考虑输入复杂度。
+这里还要给出两个概念：计算时间复杂度和标准时间复杂度。
+所谓计算时间复杂度就是大家经常用的计算复杂度方法求出的东西。
+而标准时间复杂度则">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pakchoi">
-<meta name="twitter:description">
+<meta name="twitter:title" content="伪多项式时间">
+<meta name="twitter:description" content="直观上来看你会发现像背包DP这种问题的时间复杂度居然不是指数级。。O(nW)。。
+其实网上也已经有人做出了解答
+是的，这类问题叫做伪多项式时间复杂度问题，就其本质其实也很简单，就是大多数人在计算时间复杂度的时候都忽视了一个简单的事实，那就是没有考虑输入复杂度。
+这里还要给出两个概念：计算时间复杂度和标准时间复杂度。
+所谓计算时间复杂度就是大家经常用的计算复杂度方法求出的东西。
+而标准时间复杂度则">
 <meta name="twitter:creator" content="@pakchoi">
 <link rel="publisher" href="pakchoi">
   
@@ -87,39 +102,82 @@ ga('send', 'pageview');
   </div>
 </header>
     <div class="outer">
-      <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/01/求最长等差数列/" class="archive-article-date">
-  <time datetime="2015-07-01T10:27:07.000Z" itemprop="datePublished">Jul 1</time>
+      <section id="main"><article id="post-伪多项式时间" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/21/伪多项式时间/" class="article-date">
+  <time datetime="2015-09-20T19:03:20.000Z" itemprop="datePublished">2015-09-20</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>►<a class="article-category-link" href="/categories/Math/ComplexityTheory/">ComplexityTheory</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/01/求最长等差数列/">求最长等差数列</a>
+    <h1 class="article-title" itemprop="name">
+      伪多项式时间
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>直观上来看你会发现像背包DP这种问题的时间复杂度居然不是指数级。。O(nW)。。</p>
+<p>其实网上也已经有人做出了<a href="http://stackoverflow.com/questions/19647658/what-is-pseudopolynomial-time-how-does-it-differ-from-polynomial-time" target="_blank" rel="external">解答</a></p>
+<p>是的，这类问题叫做伪多项式时间复杂度问题，就其本质其实也很简单，就是大多数人在计算时间复杂度的时候都忽视了一个简单的事实，那就是没有考虑输入复杂度。</p>
+<p>这里还要给出两个概念：计算时间复杂度和标准时间复杂度。</p>
+<p>所谓计算时间复杂度就是大家经常用的计算复杂度方法求出的东西。</p>
+<p>而标准时间复杂度则是要考虑输入复杂度，计算复杂度和输出复杂度（这个一般被包含到计算复杂度中）。</p>
+<p>我们再看下多项式时间复杂度的定义：</p>
+<blockquote>
+<p>Given this definition, the formal definition of polynomial time is the following:</p>
+<p>An algorithm runs in polynomial time if its runtime is O(xk) for some constant k, where x denotes the number of bits of input given to the algorithm.</p>
+</blockquote>
+<p>没错，x是一个输入信息量（信息论概念）的大小。是不是感觉茅塞顿开。</p>
+<p>That’s All~~</p>
+<p><a href="https://en.wikipedia.org/wiki/Pseudo-polynomial_time" target="_blank" rel="external">Reference</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://pakchoi.github.io/2015/09/21/伪多项式时间/" data-id="ciesf70te0007bn5u83emolwn" class="article-share-link">Share</a>
+      
+
+      
+        <a href="http://pakchoi.github.io/2015/09/21/伪多项式时间/#disqus_thread" class="article-comment-link">Comments</a>
+      
+
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/07/01/求最长等差数列/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">求最长等差数列</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+  <section id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
 </section>
       
       <aside id="sidebar">
@@ -207,11 +265,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'pakchoi';
   
+  var disqus_url = 'http://pakchoi.github.io/2015/09/21/伪多项式时间/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
