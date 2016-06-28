@@ -4,7 +4,7 @@
   <subtitle><![CDATA[在前行中领悟]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://pakchoi.github.io/"/>
-  <updated>2015-07-04T02:01:42.000Z</updated>
+  <updated>2016-06-28T13:19:12.861Z</updated>
   <id>http://pakchoi.github.io/</id>
   
   <author>
@@ -13,6 +13,25 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[关于实习]]></title>
+    <link href="http://pakchoi.github.io/2016/06/29/%E5%85%B3%E4%BA%8E%E5%AE%9E%E4%B9%A0/"/>
+    <id>http://pakchoi.github.io/2016/06/29/关于实习/</id>
+    <published>2016-06-28T21:16:50.000Z</published>
+    <updated>2016-06-28T13:19:12.861Z</updated>
+    <content type="html"><![CDATA[<h2 id="刷一发存在感">刷一发存在感</h2><p><img src="http://7xn7av.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720160613134842.png" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="刷一发存在感">刷一发存在感</h2><p><img src="http://7xn7av.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720160613134842.png" alt=""></p>
+]]>
+    </summary>
+    
+      <category term="Talk" scheme="http://pakchoi.github.io/categories/Talk/"/>
+    
+      <category term="" scheme="http://pakchoi.github.io/categories/undefined/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[求最长等差数列]]></title>
