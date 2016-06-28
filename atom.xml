@@ -1,194 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[pakchoi]]></title>
-  <subtitle><![CDATA[在前行中领悟]]></subtitle>
+  <title>pakchoi</title>
+  <subtitle>在前行中领悟</subtitle>
   <link href="/atom.xml" rel="self"/>
+  
   <link href="http://pakchoi.github.io/"/>
   <updated>2016-06-28T13:24:15.196Z</updated>
   <id>http://pakchoi.github.io/</id>
   
   <author>
-    <name><![CDATA[pakchoi]]></name>
+    <name>pakchoi</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[开新坑]]></title>
+    <title>开新坑</title>
     <link href="http://pakchoi.github.io/2016/06/29/%E5%BC%80%E6%96%B0%E5%9D%91/"/>
     <id>http://pakchoi.github.io/2016/06/29/开新坑/</id>
     <published>2016-06-28T21:16:50.000Z</published>
     <updated>2016-06-28T13:24:15.196Z</updated>
-    <content type="html"><![CDATA[<h2 id="刷一发存在感">刷一发存在感</h2><p>好久没写博客了:D 学校里混了一年，实现是混不下去了，只好出来实习，结果发现自己offer烂的一笔。。。（果然学渣是没出路的吗。。）<br>今天就是标记，改天发发些干货~ ~<br><img src="http://7xn7av.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720160613134842.png" alt=""></p>
-]]></content>
+    
+    <content type="html">&lt;h2 id=&quot;刷一发存在感&quot;&gt;刷一发存在感&lt;/h2&gt;&lt;p&gt;好久没写博客了:D 学校里混了一年，实现是混不下去了，只好出来实习，结果发现自己offer烂的一笔。。。（果然学渣是没出路的吗。。）&lt;br&gt;今天就是标记，改天发发些干货~ ~&lt;br&gt;&lt;img src=&quot;http://7xn7av.com1.z0.glb.clouddn.com/QQ%E5%9B%BE%E7%89%8720160613134842.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</content>
+    
     <summary type="html">
-    <![CDATA[<h2 id="刷一发存在感">刷一发存在感</h2><p>好久没写博客了:D 学校里混了一年，实现是混不下去了，只好出来实习，结果发现自己offer烂的一笔。。。（果然学渣是没出路的吗。。）<br>今天就是标记，改天发发些干货~ ~<br><img src="http://7x]]>
+    
+      &lt;h2 id=&quot;刷一发存在感&quot;&gt;刷一发存在感&lt;/h2&gt;&lt;p&gt;好久没写博客了:D 学校里混了一年，实现是混不下去了，只好出来实习，结果发现自己offer烂的一笔。。。（果然学渣是没出路的吗。。）&lt;br&gt;今天就是标记，改天发发些干货~ ~&lt;br&gt;&lt;img src=&quot;http://7x
+    
     </summary>
     
       <category term="Talk" scheme="http://pakchoi.github.io/categories/Talk/"/>
     
+    
   </entry>
   
   <entry>
-    <title><![CDATA[求最长等差数列]]></title>
+    <title>求最长等差数列</title>
     <link href="http://pakchoi.github.io/2015/07/01/%E6%B1%82%E6%9C%80%E9%95%BF%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97/"/>
     <id>http://pakchoi.github.io/2015/07/01/求最长等差数列/</id>
     <published>2015-07-01T10:27:07.000Z</published>
     <updated>2015-07-04T02:01:42.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="最长等差数列">最长等差数列</h2><p>最长连续子序列 longest consecutive sequence 问题的升级版<br>，大家一定很熟LCS问题的求解方法，甚至他的单调队列优化版本（栈优化）。</p>
-<p>这里我们将讨论其变形版：给出一系列的随机的整数数列。要求在$O(n^2)$的时间复杂度内求解出一个最长的子序列并且为等差数列。</p>
-<p>这里需要注意的是题目描述里并没有说明是输出等差数列的长度还是等差数列本身。</p>
-<p>这其实也是一个被别人研究过的问题，我这里只是给出这一问题的简单总结</p>
-<ul>
-<li>论文链接 -&gt; <a href="http://jeffe.cs.illinois.edu/pubs/pdf/arith.pdf" target="_blank" rel="external">Jeff Erickson-Finding Longest Arithmetic Progressions</a></li>
-</ul>
-<h2 id="一个观点">一个观点</h2><h3 id="方法一">方法一</h3><p>一个比较简单粗暴的方法就是枚举每两个数列项，在哈希表中维护[num, d]状态的个数，记录所有可能出现的等差数列。</p>
-<h4 id="伪代码如下：">伪代码如下：</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(n-<span class="number">1</span>, <span class="number">0</span>)</span></span></span><br><span class="line">	<span class="keyword">for</span> j <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(i+<span class="number">1</span>, n-<span class="number">1</span>)</span></span></span><br><span class="line">		d = num[j] - num[i] #数列差</span><br><span class="line">		HASH[num[i], d] = HASH[num[j], d] + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>显然下面的描述也是等效的：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(<span class="number">0</span>, n-<span class="number">1</span>)</span></span></span><br><span class="line">	<span class="keyword">for</span> j <span class="keyword">in</span> <span class="function"><span class="title">range</span><span class="params">(i+<span class="number">1</span>, n-<span class="number">1</span>)</span></span></span><br><span class="line">		d = num[j] - num[i] #数列差</span><br><span class="line">		HASH[num[j], d] = HASH[num[i], d] + <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h4 id="C++实现如下：">C++实现如下：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span>* argv[])</span> </span>&#123;</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;, <span class="keyword">int</span>&gt; HASH1;</span><br><span class="line">    <span class="keyword">int</span> N;</span><br><span class="line">    <span class="keyword">int</span> d;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; N;</span><br><span class="line">    <span class="keyword">int</span> num[N];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; num[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = N-<span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; N; j++) &#123;</span><br><span class="line">            d = num[j] - num[i];</span><br><span class="line">            HASH1[mp(num[i], d)] = HASH1[mp(num[j], d)] + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> MAX = INT_MIN;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;a : HASH1) &#123;</span><br><span class="line">        DBN(a.second);</span><br><span class="line">        <span class="keyword">if</span> (MAX &lt; a.second) &#123;</span><br><span class="line">            MAX = a.second;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, MAX+<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当然如果是自己编写的哈希表效率会更好些。</p>
-<h3 id="方法二">方法二</h3><p>这里给出另一个dp的解法，用dp(i,j)表示第i项与第j项构成的等差数列的数量。</p>
-<h4 id="C++实现如下：-1">C++实现如下：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MAX_N 10001</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span>* argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> N; <span class="keyword">int</span> d; <span class="keyword">int</span> pre;</span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; eleMap;</span><br><span class="line">    <span class="keyword">int</span> dp[MAX_N][MAX_N];</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; N;</span><br><span class="line">    <span class="keyword">int</span> num[N];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; num[i];</span><br><span class="line">        eleMap[num[i]] = i;   <span class="comment">// 逆映射</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> MAX = INT_MIN;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; N; j++) &#123;</span><br><span class="line">            d = num[j] - num[i];</span><br><span class="line">            pre = num[i] - d;</span><br><span class="line">            <span class="keyword">auto</span> it = eleMap.find(pre);</span><br><span class="line">            <span class="keyword">if</span> (it != eleMap.end()) &#123;</span><br><span class="line">                dp[i][j] = dp[it-&gt;second][i] + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                dp[i][j] = <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (dp[i][j] &gt; MAX) &#123;</span><br><span class="line">                MAX = dp[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, MAX);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="另一个观点">另一个观点</h2><p>如果我们把问题条件改一下，输出不是子序列，而是一个子集，这个自己可以构成等差数列，那么这个问题怎么求解？其实我们只要先排序就好了。</p>
-]]></content>
+    
+    <content type="html">&lt;h2 id=&quot;最长等差数列&quot;&gt;最长等差数列&lt;/h2&gt;&lt;p&gt;最长连续子序列 longest consecutive sequence 问题的升级版&lt;br&gt;，大家一定很熟LCS问题的求解方法，甚至他的单调队列优化版本（栈优化）。&lt;/p&gt;
+&lt;p&gt;这里我们将讨论其变形版：给出一系列的随机的整数数列。要求在$O(n^2)$的时间复杂度内求解出一个最长的子序列并且为等差数列。&lt;/p&gt;
+&lt;p&gt;这里需要注意的是题目描述里并没有说明是输出等差数列的长度还是等差数列本身。&lt;/p&gt;
+&lt;p&gt;这其实也是一个被别人研究过的问题，我这里只是给出这一问题的简单总结&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;论文链接 -&amp;gt; &lt;a href=&quot;http://jeffe.cs.illinois.edu/pubs/pdf/arith.pdf&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Jeff Erickson-Finding Longest Arithmetic Progressions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;一个观点&quot;&gt;一个观点&lt;/h2&gt;&lt;h3 id=&quot;方法一&quot;&gt;方法一&lt;/h3&gt;&lt;p&gt;一个比较简单粗暴的方法就是枚举每两个数列项，在哈希表中维护[num, d]状态的个数，记录所有可能出现的等差数列。&lt;/p&gt;
+&lt;h4 id=&quot;伪代码如下：&quot;&gt;伪代码如下：&lt;/h4&gt;&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;tag&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(n-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, n-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		d = num[j] - num[i] #数列差&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		HASH[num[i], d] = HASH[num[j], d] + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;显然下面的描述也是等效的：&lt;/p&gt;
+&lt;figure class=&quot;highlight stylus&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;tag&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, n-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; j &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, n-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		d = num[j] - num[i] #数列差&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		HASH[num[j], d] = HASH[num[i], d] + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;C++实现如下：&quot;&gt;C++实现如下：&lt;/h4&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc, &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt;* argv[])&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;unordered_map&lt;/span&gt;&amp;lt;pair&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt;, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; HASH1;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; N;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; d;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt; &amp;gt;&amp;gt; N;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; num[N];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; N; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt; &amp;gt;&amp;gt; num[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = N-&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i--) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt; N; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            d = num[j] - num[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            HASH1[mp(num[i], d)] = HASH1[mp(num[j], d)] + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; MAX = INT_MIN;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;auto&lt;/span&gt; &amp;amp;a : HASH1) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        DBN(a.second);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (MAX &amp;lt; a.second) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            MAX = a.second;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, MAX+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;当然如果是自己编写的哈希表效率会更好些。&lt;/p&gt;
+&lt;h3 id=&quot;方法二&quot;&gt;方法二&lt;/h3&gt;&lt;p&gt;这里给出另一个dp的解法，用dp(i,j)表示第i项与第j项构成的等差数列的数量。&lt;/p&gt;
+&lt;h4 id=&quot;C++实现如下：-1&quot;&gt;C++实现如下：&lt;/h4&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#&lt;span class=&quot;keyword&quot;&gt;define&lt;/span&gt; MAX_N 10001&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; argc, &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt;* argv[])&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; N; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; d; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; pre;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;unordered_map&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; eleMap;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; dp[MAX_N][MAX_N];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt; &amp;gt;&amp;gt; N;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; num[N];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; N; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;cin&lt;/span&gt; &amp;gt;&amp;gt; num[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        eleMap[num[i]] = i;   &lt;span class=&quot;comment&quot;&gt;// 逆映射&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; MAX = INT_MIN;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; N; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt; N; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            d = num[j] - num[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            pre = num[i] - d;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;auto&lt;/span&gt; it = eleMap.find(pre);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (it != eleMap.end()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                dp[i][j] = dp[it-&amp;gt;second][i] + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                dp[i][j] = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (dp[i][j] &amp;gt; MAX) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                MAX = dp[i][j];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;%d\n&quot;&lt;/span&gt;, MAX);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;另一个观点&quot;&gt;另一个观点&lt;/h2&gt;&lt;p&gt;如果我们把问题条件改一下，输出不是子序列，而是一个子集，这个自己可以构成等差数列，那么这个问题怎么求解？其实我们只要先排序就好了。&lt;/p&gt;
+</content>
+    
     <summary type="html">
-    <![CDATA[<h2 id="最长等差数列">最长等差数列</h2><p>最长连续子序列 longest consecutive sequence 问题的升级版<br>，大家一定很熟LCS问题的求解方法，甚至他的单调队列优化版本（栈优化）。</p>
-<p>这里我们将讨论其变形版：给出一系列的随]]>
+    
+      &lt;h2 id=&quot;最长等差数列&quot;&gt;最长等差数列&lt;/h2&gt;&lt;p&gt;最长连续子序列 longest consecutive sequence 问题的升级版&lt;br&gt;，大家一定很熟LCS问题的求解方法，甚至他的单调队列优化版本（栈优化）。&lt;/p&gt;
+&lt;p&gt;这里我们将讨论其变形版：给出一系列的随
+    
     </summary>
     
       <category term="AlgoProblem" scheme="http://pakchoi.github.io/categories/AlgoProblem/"/>
     
       <category term="Basic" scheme="http://pakchoi.github.io/categories/AlgoProblem/Basic/"/>
     
+    
   </entry>
   
   <entry>
-    <title><![CDATA[n个球放到m个盒子里]]></title>
+    <title>n个球放到m个盒子里</title>
     <link href="http://pakchoi.github.io/2015/05/19/n%E4%B8%AA%E7%90%83%E6%94%BE%E5%88%B0m%E4%B8%AA%E7%9B%92%E5%AD%90%E9%87%8C/"/>
     <id>http://pakchoi.github.io/2015/05/19/n个球放到m个盒子里/</id>
     <published>2015-05-19T10:04:46.000Z</published>
     <updated>2015-05-19T04:10:55.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="很有意思的一类组合题">很有意思的一类组合题</h2><p>n个球放到m个盒子里，根据球和盒子是否有区别以及是否允许有空盒有${ 2 } ^{ 3 }=8$种放球问题：求如下问题的放球方案数</p>
-<ul>
-<li>1) n个球有区别，m个盒子有区别，允许有空盒</li>
-<li>${ m }^{ n }$</li>
-<li>2) n个球有区别，m个盒子有区别，不允许有空盒</li>
-<li>$m!S(n,m)$</li>
-<li>3) n个球有区别，m个盒子无区别，允许有空盒</li>
-<li>$ \begin{cases} S(n,1)+S(n,2)+…+S(n,m),\quad m\le n ; \ S(n,1)+S(n,2)+…+S(n,n),\quad m&gt;n \end{cases} $</li>
-<li>4) n个球有区别，m个盒子无区别，不允许有空盒</li>
-<li>$S(n,m)$</li>
-<li>5) n个球无区别，m个盒子有区别，允许有空盒</li>
-<li>$C(n+m-1,n)$</li>
-<li>6) n个球无区别，m个盒子有区别，不允许有空盒</li>
-<li>$C(n-1,m-1)$</li>
-<li>7) n个球无区别，m个盒子无区别，允许有空盒</li>
-<li>$G(x)=\frac { 1 }{ (1-x)(1-{ x }^{ 2 })…(1-{ x }^{ m }) } $的$x^n$项的系数</li>
-<li>8) n个球无区别，m个盒子无区别，不允许有空盒</li>
-<li>$G(x)=\frac { x^m }{ (1-x)(1-{ x }^{ 2 })…(1-{ x }^{ m }) } $的$x^n$项的系数</li>
-</ul>
-<blockquote>
-<p>注：</p>
-<blockquote>
-<p>S(n,m)为第二类斯特林数<br>G(x)为母函数<br>C(n+m-1,n)为多重组合</p>
-</blockquote>
-</blockquote>
-]]></content>
+    
+    <content type="html">&lt;h2 id=&quot;很有意思的一类组合题&quot;&gt;很有意思的一类组合题&lt;/h2&gt;&lt;p&gt;n个球放到m个盒子里，根据球和盒子是否有区别以及是否允许有空盒有${ 2 } ^{ 3 }=8$种放球问题：求如下问题的放球方案数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1) n个球有区别，m个盒子有区别，允许有空盒&lt;/li&gt;
+&lt;li&gt;${ m }^{ n }$&lt;/li&gt;
+&lt;li&gt;2) n个球有区别，m个盒子有区别，不允许有空盒&lt;/li&gt;
+&lt;li&gt;$m!S(n,m)$&lt;/li&gt;
+&lt;li&gt;3) n个球有区别，m个盒子无区别，允许有空盒&lt;/li&gt;
+&lt;li&gt;$ \begin{cases} S(n,1)+S(n,2)+…+S(n,m),\quad m\le n ; \ S(n,1)+S(n,2)+…+S(n,n),\quad m&amp;gt;n \end{cases} $&lt;/li&gt;
+&lt;li&gt;4) n个球有区别，m个盒子无区别，不允许有空盒&lt;/li&gt;
+&lt;li&gt;$S(n,m)$&lt;/li&gt;
+&lt;li&gt;5) n个球无区别，m个盒子有区别，允许有空盒&lt;/li&gt;
+&lt;li&gt;$C(n+m-1,n)$&lt;/li&gt;
+&lt;li&gt;6) n个球无区别，m个盒子有区别，不允许有空盒&lt;/li&gt;
+&lt;li&gt;$C(n-1,m-1)$&lt;/li&gt;
+&lt;li&gt;7) n个球无区别，m个盒子无区别，允许有空盒&lt;/li&gt;
+&lt;li&gt;$G(x)=\frac { 1 }{ (1-x)(1-{ x }^{ 2 })…(1-{ x }^{ m }) } $的$x^n$项的系数&lt;/li&gt;
+&lt;li&gt;8) n个球无区别，m个盒子无区别，不允许有空盒&lt;/li&gt;
+&lt;li&gt;$G(x)=\frac { x^m }{ (1-x)(1-{ x }^{ 2 })…(1-{ x }^{ m }) } $的$x^n$项的系数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;S(n,m)为第二类斯特林数&lt;br&gt;G(x)为母函数&lt;br&gt;C(n+m-1,n)为多重组合&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</content>
+    
     <summary type="html">
-    <![CDATA[<h2 id="很有意思的一类组合题">很有意思的一类组合题</h2><p>n个球放到m个盒子里，根据球和盒子是否有区别以及是否允许有空盒有${ 2 } ^{ 3 }=8$种放球问题：求如下问题的放球方案数</p>
-<ul>
-<li>1) n个球有区别，m个盒子有区别，允许有空盒]]>
+    
+      &lt;h2 id=&quot;很有意思的一类组合题&quot;&gt;很有意思的一类组合题&lt;/h2&gt;&lt;p&gt;n个球放到m个盒子里，根据球和盒子是否有区别以及是否允许有空盒有${ 2 } ^{ 3 }=8$种放球问题：求如下问题的放球方案数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1) n个球有区别，m个盒子有区别，允许有空盒
+    
     </summary>
     
       <category term="Math" scheme="http://pakchoi.github.io/categories/Math/"/>
     
       <category term="Combinatorics" scheme="http://pakchoi.github.io/categories/Math/Combinatorics/"/>
     
+    
   </entry>
   
   <entry>
-    <title><![CDATA[Minkouski距离]]></title>
+    <title>Minkouski距离</title>
     <link href="http://pakchoi.github.io/2015/05/14/Minkouski%E8%B7%9D%E7%A6%BB/"/>
     <id>http://pakchoi.github.io/2015/05/14/Minkouski距离/</id>
     <published>2015-05-13T21:47:11.000Z</published>
     <updated>2015-05-16T15:36:34.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="最近看书的时候注意到了一个问题：Minkouski距离">最近看书的时候注意到了一个问题：Minkouski距离</h3><p>$ d(i, j) = \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ p }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ p } } $</p>
-<h4 id="其有三个属性：">其有三个属性：</h4><ul>
-<li>Positivity : 必然为正数</li>
-<li>Symmetry 对称性 : $p_1$与$p_2$相互距离相等</li>
-<li>Triangle Inequality : 对于任意$p_i$、$p_j$、$p_k$，$d(i,j)\le d(i,k)+d(k,j)$</li>
-</ul>
-<h4 id="Minkouski_ditance还可以分为：">Minkouski ditance还可以分为：</h4><ul>
-<li>p = 1 , Manhattan (or city block) distance 曼哈顿距离</li>
-<li><ul>
-<li>E.g. the Hamming distance: 可以使用奇偶剪枝<br>$ d(i, j) = { \left| { x }_ { i1 }-{ x }_ { j1 } \right| +\left| { x }_ { i2 }-{ x }_ { j2 } \right| +…+\left| { x }_ { i3 }-{ x }_ { j3 } \right|  } $</li>
-</ul>
-</li>
-<li><p>p = 2 , Euclidean distance 欧几里得距离<br>$ d(i, j) = \sqrt{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ 2 }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ 2 }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ 2 } } $</p>
-</li>
-<li>p-&gt;oo , supremum distance 切比雪夫距离（两点各座标数值差绝对值的最大值）<br>$d(i,j)={ max(\left| { x }_ { i1 }-{ x }_ { j1 } \right| ,\left| { x }_ { i2 }-{ x }_ { j2 } \right| ,…,\left| { x }_ { i3 }-{ x }_ { j3 } \right|  })$</li>
-</ul>
-<h4 id="距离的定义可以直接影响一些问题：">距离的定义可以直接影响一些问题：</h4><ul>
-<li>比如A*和IDA*启发函数的设计。。</li>
-<li>比如描述两组数据的相似度，或者说是两组状态的相似度。。</li>
-<li>比如k-means算法中距离的衡量的标准。。</li>
-<li>比如knn算法中距离。。</li>
-<li>。。。。。。</li>
-</ul>
-]]></content>
+    
+    <content type="html">&lt;h3 id=&quot;最近看书的时候注意到了一个问题：Minkouski距离&quot;&gt;最近看书的时候注意到了一个问题：Minkouski距离&lt;/h3&gt;&lt;p&gt;$ d(i, j) = \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ p }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ p } } $&lt;/p&gt;
+&lt;h4 id=&quot;其有三个属性：&quot;&gt;其有三个属性：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Positivity : 必然为正数&lt;/li&gt;
+&lt;li&gt;Symmetry 对称性 : $p_1$与$p_2$相互距离相等&lt;/li&gt;
+&lt;li&gt;Triangle Inequality : 对于任意$p_i$、$p_j$、$p_k$，$d(i,j)\le d(i,k)+d(k,j)$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;Minkouski_ditance还可以分为：&quot;&gt;Minkouski ditance还可以分为：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;p = 1 , Manhattan (or city block) distance 曼哈顿距离&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;E.g. the Hamming distance: 可以使用奇偶剪枝&lt;br&gt;$ d(i, j) = { \left| { x }_ { i1 }-{ x }_ { j1 } \right| +\left| { x }_ { i2 }-{ x }_ { j2 } \right| +…+\left| { x }_ { i3 }-{ x }_ { j3 } \right|  } $&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;p = 2 , Euclidean distance 欧几里得距离&lt;br&gt;$ d(i, j) = \sqrt{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ 2 }+{ ({ x }_{ i2 }-{ x }_{ j2 }) }^{ 2 }+…+{ ({ x }_{ il }-{ x }_{ jl }) }^{ 2 } } $&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;p-&amp;gt;oo , supremum distance 切比雪夫距离（两点各座标数值差绝对值的最大值）&lt;br&gt;$d(i,j)={ max(\left| { x }_ { i1 }-{ x }_ { j1 } \right| ,\left| { x }_ { i2 }-{ x }_ { j2 } \right| ,…,\left| { x }_ { i3 }-{ x }_ { j3 } \right|  })$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;距离的定义可以直接影响一些问题：&quot;&gt;距离的定义可以直接影响一些问题：&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;比如A*和IDA*启发函数的设计。。&lt;/li&gt;
+&lt;li&gt;比如描述两组数据的相似度，或者说是两组状态的相似度。。&lt;/li&gt;
+&lt;li&gt;比如k-means算法中距离的衡量的标准。。&lt;/li&gt;
+&lt;li&gt;比如knn算法中距离。。&lt;/li&gt;
+&lt;li&gt;。。。。。。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
     <summary type="html">
-    <![CDATA[<h3 id="最近看书的时候注意到了一个问题：Minkouski距离">最近看书的时候注意到了一个问题：Minkouski距离</h3><p>$ d(i, j) = \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ ]]>
+    
+      &lt;h3 id=&quot;最近看书的时候注意到了一个问题：Minkouski距离&quot;&gt;最近看书的时候注意到了一个问题：Minkouski距离&lt;/h3&gt;&lt;p&gt;$ d(i, j) = \sqrt [ p ]{ { ({ x }_{ i1 }-{ x }_{ j1 }) }^{ p }+{ ({ 
+    
     </summary>
     
       <category term="Math" scheme="http://pakchoi.github.io/categories/Math/"/>
     
       <category term="Geometry" scheme="http://pakchoi.github.io/categories/Math/Geometry/"/>
     
+    
   </entry>
   
   <entry>
-    <title><![CDATA[Homebrew滚动更新的问题]]></title>
+    <title>Homebrew滚动更新的问题</title>
     <link href="http://pakchoi.github.io/2015/05/08/homebrew%E6%BB%9A%E5%8A%A8%E6%9B%B4%E6%96%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://pakchoi.github.io/2015/05/08/homebrew滚动更新的问题/</id>
     <published>2015-05-07T21:18:39.000Z</published>
     <updated>2015-05-17T01:03:24.000Z</updated>
-    <content type="html"><![CDATA[<a id="more"></a>
-<p>最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。</p>
-<p>具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个叫做ilmbase的软件的动态库文件。。。</p>
-<p>那既然知道了问题所在，解决方法就有了，很简单就是指定版本重装ilmbase。</p>
-<p>这里再给个brew的小技巧:<br>brew pin ilmbase<br>brew pin openexr<br>上面两个命令的意思就是说固定软件版本，很简单易用吧~~</p>
-<p>homebrew的ruby包:</p>
-<ul>
-<li><a href="https://raw.githubusercontent.com/Homebrew/homebrew/2482d6e77ffcf2da68d11846dd8686a842286ac3/Library/Formula/ilmbase.rb" target="_blank" rel="external">ilmbase.rb</a></li>
-<li><a href="https://raw.githubusercontent.com/Homebrew/homebrew/22076e28a72e7d4c028131bf7acb522f6505738f/Library/Formula/openexr.rb" target="_blank" rel="external">openexr.rb</a></li>
-</ul>
-]]></content>
+    
+    <content type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。&lt;/p&gt;
+&lt;p&gt;具体点今天的问题就是opencv的libopencv_highgui.2.4.dylib，所依赖的libImath-2_1.11.dylib找不到了，那libImath是啥呢？一查居然是一个叫做ilmbase的软件的动态库文件。。。&lt;/p&gt;
+&lt;p&gt;那既然知道了问题所在，解决方法就有了，很简单就是指定版本重装ilmbase。&lt;/p&gt;
+&lt;p&gt;这里再给个brew的小技巧:&lt;br&gt;brew pin ilmbase&lt;br&gt;brew pin openexr&lt;br&gt;上面两个命令的意思就是说固定软件版本，很简单易用吧~~&lt;/p&gt;
+&lt;p&gt;homebrew的ruby包:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/Homebrew/homebrew/2482d6e77ffcf2da68d11846dd8686a842286ac3/Library/Formula/ilmbase.rb&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;ilmbase.rb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://raw.githubusercontent.com/Homebrew/homebrew/22076e28a72e7d4c028131bf7acb522f6505738f/Library/Formula/openexr.rb&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;openexr.rb&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
     <summary type="html">
-    <![CDATA[<a id="more"></a>
-<p>最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。</p>
-<p>具体点今天的问]]>
+    
+      &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;最近遇到一个很郁闷的事情，就是本来能运行的项目突然就crash了，郁闷之余发现是一个软件的版本太高了（囧）。那为啥以前就没事呢？再思考一下估计是自己写的滚动更新的脚本的毛病，本来是想省事的却反而弄巧成茁。。。&lt;/p&gt;
+&lt;p&gt;具体点今天的问
+    
     </summary>
     
       <category term="C++" scheme="http://pakchoi.github.io/categories/C/"/>
     
       <category term="etc." scheme="http://pakchoi.github.io/categories/C/etc/"/>
     
+    
   </entry>
   
   <entry>
-    <title><![CDATA[新博客与新目标]]></title>
+    <title>新博客与新目标</title>
     <link href="http://pakchoi.github.io/2015/03/11/%E6%96%B0%E5%8D%9A%E5%AE%A2%E4%B8%8E%E6%96%B0%E7%9B%AE%E6%A0%87/"/>
     <id>http://pakchoi.github.io/2015/03/11/新博客与新目标/</id>
     <published>2015-03-10T16:11:44.000Z</published>
     <updated>2015-03-10T08:21:07.000Z</updated>
-    <content type="html"><![CDATA[<p>今天开始使用hexo写博客。在此我将记录成长。</p>
-]]></content>
+    
+    <content type="html">&lt;p&gt;今天开始使用hexo写博客。在此我将记录成长。&lt;/p&gt;
+</content>
+    
     <summary type="html">
-    <![CDATA[<p>今天开始使用hexo写博客。在此我将记录成长。</p>
-]]>
+    
+      &lt;p&gt;今天开始使用hexo写博客。在此我将记录成长。&lt;/p&gt;
+
+    
     </summary>
+    
     
   </entry>
   
